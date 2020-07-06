@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_페이지 이동.html</title>
+</head>
+
+
+<body>
+    <h3> 1. a태그로 페이지 이동하기 </h3>
+    
+    <!-- a 태그의 href 속성에 가고싶은 주소를 입력하면 이동할 수 있다.-->
+    <a href="http://naver.com">네이버로 이동하기</a> <br>
+    
+    <!-- http://가 빠지면 상대경로가 되어 현재 폴더의 naver.com 을 찾는다.-->
+    <a href="naver.com">http를 빼고 네이버로 이동하기</a> <br>
+
+
+    <!--우리가 작성했던 다른 페이지로 이동하기-->
+    
+    <!--/ : 절대경로, 현재 드라이브의 ROOT를 찾는다.-->
+    <a href="/html/6월_jsp 평일반 주혜원/html/01_HTML 기본.html">01 : 기본</a><br>
+    
+    <!-- ./ : 현재 경로(상대경로)-->
+    <a href="./html/02_HTML 줄바꾸기.html">02 : 줄 바꾸기</a><br>
+    
+    <!-- ../ : 상위 폴더(상대경로)-->
+    <a href="../html/03_HTML 속성.html">03 : 속성</a><br>
+
+    <!--태그를 버튼처럼 보이게 하는것은 매우 쉽다.-->
+    <a style="
+        color : #03c75a;
+        text-decoration: none;
+        font-family: -apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕',helvetica,'Apple SD Gothic Neo',sans-serif;
+        padding : 10px 5px;"
+        href="http://comic.naver.com/index.nhn">웹툰</a>
+
+    <h3> 2. JavaScript로 페이지 이동하기 </h3>
+
+    <div style="cursor:pointer;"
+        onclick="location.href='http://naver.com'"> 
+        <!--여기서 onclick대신 mouseover은 마우스를 대기만 해도 페이지 이동-->
+        onclick은 global attribute 이기 때문에 아무 태그나 써도 이동할 수 있다.
+    
+ 
+        <p>javascript로 페이지 이동</p>
+        <div style="cursor:pointer;"
+        onclick="hello()">안녕하세요</div> 
+
+    
+    
+    
+    </div>
+
+    <h3> 3. Form 태그를 이용해 데이터와 함께 페이지 이동하기 </h3>
+
+    
+</body>
+
+<script>
+//자바 스크립트 영역
+function hello(){
+    alert('hello!');
+
+    //  JavaScript의 location.href 값을 변경하면 페이지를 이동하게 된다.
+    location.href="./03_속성.html";
+    return;
+}
+
+</script>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>03_속성.html</title>
+</head>
+<body>
+    
+    <h3> 속성 (Attribute)</h3>
+    <p>
+        속성이란? - 태그의 속성을 설정하는 값<br>
+        <b style= "color: navy;"> 속성은 적용하고 싶은 element의 여는 태그에 적어야 한다.</b>
+        글로벌 속성 - 모든 태그에 적용될 수 있는 속성<br>
+        기본 속성 - 그 태그에만 적용할 수 있는 속성<br>
+    </p>
+
+    <h3>글로벌 속성(Global Attribute)</h3>
+
+    <!--unordered list : 순서가 없는 리스트 태그-->
+    <ul>
+        <!-- list item-->
+        <li> style : CSS(스타일 시트)를 적용하는 속성</li>
+        < li> id : 해당 태그를 유일하게 구분하기 위한 아이디를 설정</li>
+        < li> class : 비슷한 태그끼리 그룹을 설정하는 용도로 사용한다.</li>
+        < li> 다양한 이벤트 리스너들..</li>
+    </ul>
+    <!-- style 속성을 설정하면 해당 요소가 사용자에게 어떤 모습으로 보일지 설정할 수 있다.  이렇게 암만 써도 메모장으로 열면 안보임. html이라서 보인다.-->
+    <p style="color : purple;
+        background: red; 
+        padding : 10px;
+        border : 5px dashed black;
+    "> 저는 p태그의 내용입니다.</p>
+    <p hidden style="color : brown;"> 저는 p태그의 내용입니다.</p>
+    <p style="color : cornflowerblue"> 저는 p태그의 내용입니 다.</p>
+    
+    <!--id 속성은 element를 구분하기 위해 사용한다-->
+    <!--class 속성은 그룹을 짓기 위해 사용한다-->
+
+    <div id = "div1" class="big">div1</div>
+    <div id = "div2" class="small">div2</div>
+    <div id = "div3" class="big">div3</div>
+    <div id = "div4" class="small">div4</div>
+
+    <!--on 이 붙은 속성들을 이벤트리스너 속성이라고 부른다.-->
+    <div class="big" onclick="'짜잔')">을 클릭해보세요!</div>
+    <div style="border : solid black; width: 100px; height : 200px;"
+    onmouseover="alert('짜잔')"> 마우스를 올려보세요!</div>
+
+    
+</body>
+
+<style>
+    .big{
+        front-size: 3.0em;
+    }
+    .small{
+        front-size : 0.8em;
+    }
+    #div1{
+        border : 3px solid salmon;
+        width : 200px;
+        height: 200px;
+    }
+</style>
+
+
+</html>
